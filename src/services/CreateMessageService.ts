@@ -3,10 +3,6 @@ import { prismaClient } from "../prisma";
 
 class CreateMessageService {
   async execute(text: string, user_id: string) {
-
-
-
-
     const message = await prismaClient.message.create({
       data: {
         text,
@@ -28,7 +24,6 @@ class CreateMessageService {
     };
 
     io.emit("new_message", infoWS);
-
 
     return message;
   }
