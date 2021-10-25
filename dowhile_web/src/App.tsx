@@ -1,6 +1,14 @@
+import { LoginBox } from './components/LoginBox';
+import { MessageList } from './components/MessagesList';
+
+import styles from './App.module.scss';
+
 function App() {
   return (
-    <h1>Hello DoWhile</h1>
+    <main className={styles.contentWrapper}>
+      <MessageList />
+      <LoginBox />
+    </main>
   )
 }
 
